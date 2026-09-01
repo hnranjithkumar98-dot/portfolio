@@ -313,6 +313,7 @@ section{ padding:88px 0; border-bottom:1px solid var(--line); }
 /* ---------- footer titleblock ---------- */
 footer{ padding:56px 0 44px; }
 .footer-grid{ display:flex; justify-content:space-between; align-items:end; flex-wrap:wrap; gap:24px; }
+.footer-box{ padding:32px; }
 .footer-name{ font-family:'Space Grotesk', sans-serif; font-size:18px; font-weight:600; }
 .footer-line{ font-size:13.5px; color:var(--muted); margin-top:6px; }
 .footer-meta{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--muted); text-align:right; line-height:1.8; }
@@ -324,9 +325,11 @@ footer{ padding:56px 0 44px; }
   .tb-meta{ text-align:left; }
   .spec-grid{ grid-template-columns:1fr; }
   .log-entry{ grid-template-columns:1fr; }
-  .reg-row{ grid-template-columns:32px 1fr; row-gap:4px; }
-  .reg-region, .reg-link{ display:none; }
-  .nav-links{ gap:16px; }
+  .reg-row{ grid-template-columns:28px 1fr; row-gap:2px; }
+  .reg-region{ display:none; }
+  .reg-link{ grid-column:2; grid-row:2; text-align:left; font-size:12px; padding-top:2px; }
+  .nav-links{ gap:14px; }
+  .nav-links a{ font-size:13px; }
   .sec-note{ text-align:left; }
   .edu-grid{ grid-template-columns:1fr; }
   .footer-grid{ flex-direction:column; align-items:flex-start; }
@@ -335,6 +338,29 @@ footer{ padding:56px 0 44px; }
   .filter-search{ width:100%; }
   .filter-search input{ flex:1; width:auto; }
   .hero-crosshair{ display:none; }
+  .hero{ padding:72px 0 60px; }
+  .hero-stats{ gap:32px 40px; }
+  section{ padding:64px 0; }
+  .spec{ padding:28px; }
+  .footer-box{ padding:24px; }
+}
+
+@media (max-width:480px){
+  .wrap{ padding:0 20px; }
+  .nav-mark{ display:none; }
+  .nav-links{ gap:10px; }
+  .nav-links a{ font-size:12px; }
+  nav .wrap{ height:48px; }
+  .hero{ padding:56px 0 48px; }
+  .hero-stats{ gap:24px 32px; }
+  .stat-num{ font-size:28px; }
+  .sec-title{ font-size:23px; }
+  .spec{ padding:20px; }
+  section{ padding:48px 0; }
+  .filter-tabs{ gap:6px; }
+  .filter-btn{ padding:6px 10px; font-size:11px; }
+  .footer-box{ padding:18px; }
+  .btn{ padding:11px 18px; font-size:14px; }
 }
 </style>
 </head>
@@ -586,7 +612,7 @@ footer{ padding:56px 0 44px; }
 
 <footer id="contact">
   <div class="wrap">
-    <div class="footer-grid reg-mark" style="padding:32px;">
+    <div class="footer-grid reg-mark footer-box">
       <div>
         <div class="footer-name">Let's build something.</div>
         <div class="footer-line">Open to WordPress and front-end roles, Pune or remote.</div>
